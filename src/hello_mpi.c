@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
   MPI_Comm_rank(MPI_COMM_WORLD, &rank);
   MPI_Get_processor_name(processor_name, &namelen);
 
-  printf("Process %d on %s out of %d\n | v%d.%d.%d", rank, processor_name, numprocs,OMPI_MAJOR_VERSION,OMPI_MINOR_VERSION,OMPI_RELEASE_VERSION);
+  printf("Process %d on %s out of %d | v%d.%d.%d\n", rank, processor_name, numprocs,OMPI_MAJOR_VERSION,OMPI_MINOR_VERSION,OMPI_RELEASE_VERSION);
 
   MPI_Finalize();
 }
